@@ -1,0 +1,313 @@
+index.html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CapitalStack | Stack Smarter Capital</title>
+  <meta name="description" content="Compare business funding paths by fit, speed, amount, credit profile, revenue requirements, and documents needed — without wandering through lender hell with a blindfold on.">
+  <meta name="theme-color" content="#050507">
+  <meta property="og:title" content="CapitalStack | Stack Smarter Capital">
+  <meta property="og:description" content="Compare funding paths. Check basic fit. Get routed toward the right next step.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <link rel="canonical" href="/">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#marketplace">Skip to funding marketplace</a>
+
+  <header class="site-header" data-header>
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand-mark" href="#top" aria-label="CapitalStack home">
+        <span class="brand-icon" aria-hidden="true">CS</span>
+        <span class="brand-word">CapitalStack</span>
+      </a>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-links" id="nav-links" data-nav-links>
+        <a href="#featured">Featured</a>
+        <a href="#marketplace">Marketplace</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#marketplace">Find My Funding Path</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-grid" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">White-labeled funding marketplace</p>
+        <h1 id="hero-title">Stack Smarter Capital.</h1>
+        <p class="hero-subtitle">Compare funding paths by fit, speed, amount, credit profile, revenue requirements, and documents needed — without wandering through lender hell with a blindfold on.</p>
+
+        <div class="hero-actions" aria-label="Hero calls to action">
+          <a class="button button-primary" href="#marketplace">Find My Funding Path</a>
+          <a class="button button-ghost" href="#featured">Browse Funding Stacks</a>
+        </div>
+
+        <ul class="signal-list" aria-label="Funding path highlights">
+          <li>Startup-friendly options</li>
+          <li>Revenue-based capital</li>
+          <li>Lines of credit</li>
+          <li>Equipment and real estate paths</li>
+          <li>Fast working capital routes</li>
+          <li>Credit-based funding options</li>
+        </ul>
+      </div>
+
+      <aside class="hero-terminal reveal" aria-label="Capital route preview">
+        <div class="terminal-top">
+          <span></span>
+          <span></span>
+          <span></span>
+          <strong>CAPITAL ROUTE SCANNER</strong>
+        </div>
+        <div class="terminal-grid">
+          <div>
+            <span class="metric-label">Funding fit</span>
+            <strong class="terminal-value">Profile-dependent</strong>
+          </div>
+          <div>
+            <span class="metric-label">Speed</span>
+            <strong class="terminal-value">Instant → 90 days</strong>
+          </div>
+          <div>
+            <span class="metric-label">Route mode</span>
+            <strong class="terminal-value">Compare first</strong>
+          </div>
+          <div>
+            <span class="metric-label">Backend exposure</span>
+            <strong class="terminal-value">Suppressed</strong>
+          </div>
+        </div>
+        <div class="route-card">
+          <span class="pill pill-green">No guessing games</span>
+          <h2>Your next move deserves better than “maybe.”</h2>
+          <p>See public funding paths, understand basic requirements, then take the right next step without the banker cosplay.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="trust-strip" aria-label="CapitalStack positioning markers">
+      <span>Compare by fit, not hype</span>
+      <span>White-labeled funding paths</span>
+      <span>Built for real operators</span>
+      <span>Clear requirements upfront</span>
+      <span>No backend lender exposure</span>
+    </section>
+
+    <section class="stats-wrap section-block reveal" aria-labelledby="stats-title">
+      <div class="section-heading">
+        <p class="eyebrow">Marketplace snapshot</p>
+        <h2 id="stats-title">The capital map, not the lender swamp.</h2>
+        <p>Counts update from the registry when the product file is available. No guarantees, no fabricated approvals, no fake lender parade.</p>
+      </div>
+      <div class="stats-grid" id="statsGrid" aria-live="polite">
+        <article class="stat-card"><span>Programs</span><strong>—</strong></article>
+        <article class="stat-card"><span>Featured</span><strong>—</strong></article>
+        <article class="stat-card"><span>Lowest min</span><strong>—</strong></article>
+        <article class="stat-card"><span>Highest max</span><strong>—</strong></article>
+        <article class="stat-card"><span>Startup-friendly</span><strong>—</strong></article>
+        <article class="stat-card"><span>Fast routes</span><strong>—</strong></article>
+      </div>
+    </section>
+
+    <section class="section-block reveal" id="featured" aria-labelledby="featured-title">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Featured funding stacks</p>
+          <h2 id="featured-title">Options that deserve the first look.</h2>
+        </div>
+        <a class="text-link" href="#marketplace">View all stacks</a>
+      </div>
+      <div class="featured-grid" id="featuredGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="marketplace-shell section-block" id="marketplace" aria-labelledby="marketplace-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Search the stack</p>
+        <h2 id="marketplace-title">Find the capital route built for your business.</h2>
+        <p>Filter by category, funding type, credit tier, urgency, startup fit, revenue requirement, collateral, real estate, e-commerce, and amount range.</p>
+      </div>
+
+      <div class="filter-panel reveal" aria-label="Funding product filters">
+        <div class="filter-row filter-row-main">
+          <label class="field field-search">
+            <span>Keyword search</span>
+            <input id="searchInput" type="search" placeholder="Search funding type, use case, speed, documents..." autocomplete="off">
+          </label>
+
+          <label class="field">
+            <span>Sort</span>
+            <select id="sortSelect">
+              <option value="featured">Featured first</option>
+              <option value="fastest">Fastest funding</option>
+              <option value="highestMax">Highest max amount</option>
+              <option value="lowestCredit">Lowest minimum credit score</option>
+              <option value="lowestRevenue">Lowest minimum revenue</option>
+              <option value="az">A–Z</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="filter-row filter-row-selects">
+          <label class="field">
+            <span>Category</span>
+            <select id="categoryFilter"><option value="">All categories</option></select>
+          </label>
+
+          <label class="field">
+            <span>Funding type</span>
+            <select id="fundingTypeFilter"><option value="">All funding types</option></select>
+          </label>
+
+          <label class="field">
+            <span>Credit tier</span>
+            <select id="creditTierFilter"><option value="">All credit tiers</option></select>
+          </label>
+
+          <label class="field">
+            <span>Urgency</span>
+            <select id="urgencyFilter"><option value="">All urgency levels</option></select>
+          </label>
+
+          <label class="field">
+            <span>Minimum amount</span>
+            <input id="minAmountFilter" type="number" min="0" inputmode="numeric" placeholder="e.g. 10000">
+          </label>
+
+          <label class="field">
+            <span>Maximum amount</span>
+            <input id="maxAmountFilter" type="number" min="0" inputmode="numeric" placeholder="e.g. 500000">
+          </label>
+        </div>
+
+        <fieldset class="chip-fieldset">
+          <legend>Route tags</legend>
+          <label class="check-chip"><input id="featuredOnlyFilter" type="checkbox"> Featured only</label>
+          <label class="check-chip"><input id="startupFilter" type="checkbox"> Startup friendly</label>
+          <label class="check-chip"><input id="revenueRequiredFilter" type="checkbox"> Revenue required</label>
+          <label class="check-chip"><input id="noRevenueFilter" type="checkbox"> No revenue required</label>
+          <label class="check-chip"><input id="collateralFilter" type="checkbox"> Collateral required</label>
+          <label class="check-chip"><input id="noCollateralFilter" type="checkbox"> No collateral required</label>
+          <label class="check-chip"><input id="realEstateFilter" type="checkbox"> Real estate</label>
+          <label class="check-chip"><input id="ecommerceFilter" type="checkbox"> E-commerce</label>
+        </fieldset>
+
+        <div class="filter-footer">
+          <p id="resultsCount" aria-live="polite">Loading funding stacks…</p>
+          <button class="button button-small button-ghost" type="button" id="resetFilters">Reset filters</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <h3>No stack matched that filter set.</h3>
+        <p>Pull back one requirement and try again. Funding fit is a profile game, not a magic keyword trick.</p>
+      </div>
+    </section>
+
+    <section class="how-section section-block reveal" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-heading">
+        <p class="eyebrow">How CapitalStack works</p>
+        <h2 id="how-title">Less lender scavenger hunt. More route clarity.</h2>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <h3>Compare the Stack</h3>
+          <p>Browse funding paths by amount, speed, credit profile, revenue, collateral, and use case.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <h3>Check Your Fit</h3>
+          <p>Review requirements before you waste time chasing the wrong capital product.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <h3>Take the Next Step</h3>
+          <p>Submit your info or book the right funding conversation so the file can be routed properly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-panel reveal" id="find-your-stack" aria-labelledby="cta-title">
+      <p class="eyebrow">Find your stack</p>
+      <h2 id="cta-title">Your business does not need another maybe. It needs a funding path.</h2>
+      <p>Compare options, check basic fit, and move toward the next step with cleaner requirements upfront.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#marketplace">Start Capital Match</a>
+        <a class="button button-ghost" href="#faq">Read the rules first</a>
+      </div>
+    </section>
+
+    <section class="faq-section section-block reveal" id="faq" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <p class="eyebrow">Marketplace FAQs</p>
+        <h2 id="faq-title">Plain-English funding questions.</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>Does CapitalStack guarantee approval?</summary>
+          <p>No. Funding is subject to underwriting, documentation, applicant profile, product type, and funding partner criteria.</p>
+        </details>
+        <details>
+          <summary>Will I see the backend funding provider?</summary>
+          <p>CapitalStack presents white-labeled funding paths and routes inquiries based on fit. Backend provider details may remain internal.</p>
+        </details>
+        <details>
+          <summary>What kind of businesses can use CapitalStack?</summary>
+          <p>Startups, established small businesses, e-commerce sellers, real estate investors, contractors, consultants, gig workers, and operators seeking capital options.</p>
+        </details>
+        <details>
+          <summary>What documents are usually needed?</summary>
+          <p>Requirements vary by product. Common items include ID, bank statements, credit authorization, income verification, business financials, tax returns, invoices, or property documents.</p>
+        </details>
+        <details>
+          <summary>How fast can funding happen?</summary>
+          <p>Some options may move quickly when the applicant profile and documentation are strong. Others, such as real estate or structured growth loans, may take longer.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="disclaimer section-block" aria-labelledby="disclaimer-title">
+      <h2 id="disclaimer-title">Compliance-safe disclaimer</h2>
+      <p>Funding is subject to approval. Terms, amounts, rates, timelines, fees, repayment structures, and qualification requirements may vary by applicant profile, product type, documentation, underwriting criteria, and funding partner. CapitalStack does not guarantee approval, funding, rates, terms, or timelines. This website is for informational and lead-routing purposes only.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand-mark" href="#top" aria-label="CapitalStack home">
+        <span class="brand-icon" aria-hidden="true">CS</span>
+        <span class="brand-word">CapitalStack</span>
+      </a>
+      <p>No lender scavenger hunt. No banker cosplay. No guessing games. Just cleaner capital paths.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="#marketplace">Marketplace</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#disclaimer-title">Disclaimer</a>
+    </nav>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button class="modal-close" type="button" id="modalClose" aria-label="Close product details">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
