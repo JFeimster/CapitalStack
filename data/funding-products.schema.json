@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://capitalstack.local/schemas/funding-products.schema.json",
+  "title": "CapitalStack White-Labeled Funding Product Registry",
+  "description": "Schema for public-safe funding marketplace product records. Internal fields may exist in the source registry but must not be rendered in the public website.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": true,
+    "required": [
+      "public_product_name",
+      "slug",
+      "category",
+      "funding_type",
+      "short_description",
+      "amount_range",
+      "minimums",
+      "primary_cta",
+      "flags"
+    ],
+    "properties": {
+      "schema_version": {
+        "type": "string",
+        "description": "Registry schema version."
+      },
+      "status": {
+        "type": "string",
+        "enum": ["active", "inactive", "draft", "archived"],
+        "default": "active"
+      },
+      "public_product_name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "internal_product_name": {
+        "type": "string",
+        "description": "Internal only. Never render publicly."
+      },
+      "slug": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "visibility": {
+        "type": "string",
+        "enum": ["public", "private", "hidden"],
+        "default": "public"
+      },
+      "category": {
+        "type": "string"
+      },
+      "funding_type": {
+        "type": "string"
+      },
+      "solution_family": {
+        "type": "string"
+      },
+      "product_family_slug": {
+        "type": "string"
+      },
+      "short_description": {
+        "type": "string"
+      },
+      "full_description": {
+        "type": "string"
+      },
+      "amount_range": {
+        "type": "object",
+        "required": ["min", "max"],
+        "additionalProperties": false,
+        "properties": {
+          "min": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "max": {
+            "type": ["number", "null"],
+            "minimum": 0
+          }
+        }
+      },
+      "payment_type": {
+        "type": ["string", "null"]
+      },
+      "credit_tier": {
+        "type": ["string", "null"]
+      },
+      "minimums": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "credit_score": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "monthly_revenue": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "time_in_business": {
+            "type": ["string", "null"]
+          }
+        }
+      },
+      "term_length": {
+        "type": ["string", "null"]
+      },
+      "pricing_summary": {
+        "type": ["string", "null"]
+      },
+      "speed_to_funding": {
+        "type": ["string", "null"]
+      },
+      "qualification_snapshot": {
+        "type": ["string", "null"]
+      },
+      "disqualifiers": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "documents_required": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "primary_cta": {
+        "type": "object",
+        "required": ["text", "url_placeholder"],
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "url_placeholder": {
+            "type": "string"
+          }
+        }
+      },
+      "recommended_audience": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "urgency_level": {
+        "type": ["string", "null"]
+      },
+      "flags": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "collateral_required": {
+            "type": "boolean"
+          },
+          "revenue_required": {
+            "type": "boolean"
+          },
+          "real_estate": {
+            "type": "boolean"
+          },
+          "ecommerce": {
+            "type": "boolean"
+          },
+          "startup": {
+            "type": "boolean"
+          },
+          "featured": {
+            "type": "boolean"
+          }
+        }
+      },
+      "consumer_or_business": {
+        "type": ["string", "null"]
+      },
+      "seo": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "meta_description": {
+            "type": "string"
+          },
+          "h1": {
+            "type": "string"
+          },
+          "page_intro": {
+            "type": "string"
+          },
+          "faqs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["question", "answer"],
+              "additionalProperties": false,
+              "properties": {
+                "question": {
+                  "type": "string"
+                },
+                "answer": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "qualification_band": {
+        "type": ["string", "null"]
+      },
+      "internal_route_tag": {
+        "type": "string",
+        "description": "Internal only. Never render publicly."
+      },
+      "internal_priority": {
+        "type": "string",
+        "description": "Internal only. Never render publicly."
+      },
+      "docs_checklist_internal": {
+        "type": "array",
+        "description": "Internal only. Never render publicly.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "collection": {
+        "type": "string"
+      },
+      "public_visibility": {
+        "type": "boolean",
+        "default": true
+      },
+      "source_files": {
+        "type": "array",
+        "description": "Internal only. Never render publicly.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "internal_notes": {
+        "type": "string",
+        "description": "Internal only. Never render publicly."
+      }
+    }
+  }
+}
