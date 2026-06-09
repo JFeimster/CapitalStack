@@ -1,4 +1,3 @@
-README.md
 # CapitalStack
 
 CapitalStack is a dependency-free static funding marketplace for business owners, founders, e-commerce sellers, real estate investors, contractors, creators, consultants, brokers, and operators who need a cleaner way to compare funding paths.
