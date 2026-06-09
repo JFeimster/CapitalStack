@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js-enabled");
+
 const REGISTRY_URL = "/data/funding-products.whitelabel.registry.json";
 const PRIMARY_APPLICATION_URL = "{{primary_application_url}}";
 
